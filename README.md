@@ -1,3 +1,14 @@
+## Storybook Boilerplate Fork
+
+- outdated dependencies
+- react 15
+
+
+
+
+====================================
+
+
 ## Storybook Boilerplate
 
 [![Live demo](https://img.shields.io/badge/Live%20Demo-%20Storybook-brightgreen.svg)](https://sm-react.github.io/storybook-boilerplate)
@@ -37,13 +48,13 @@ We mark with [<img src="doc/msm.png" alt="Milestone" width="22">](#roadmap) icon
 - **Testing**:
 
      [<img src="doc/msm.png" alt="Milestone" width="22">](#roadmap) [StoryShots](https://github.com/storybooks/storyshots) - *provides [Snapshot Testing](https://facebook.github.io/jest/blog/2016/07/27/jest-14.html) for React Storybook*
- 
+
      🔋 [Mocha](https://github.com/mochajs/mocha) and [Enzyme](https://github.com/airbnb/enzyme)
 
 - **React ecosystem**:
 
      🔋 [Material-UI](http://www.material-ui.com/#/) - *via [Storybook Addon Material-UI](https://github.com/sm-react/storybook-addon-material-ui)*
- 
+
      🔋 [React Theme Provider](https://github.com/sm-react/react-theme-provider)
 
 - **Workflow *(via NPM scripts command)*:**
@@ -51,15 +62,15 @@ We mark with [<img src="doc/msm.png" alt="Milestone" width="22">](#roadmap) icon
      🔋 Support for Linux, macOS, and Windows
 
      [<img src="doc/msm.png" alt="Milestone" width="22">](#roadmap) Build your App with [Webpack](https://github.com/webpack/webpack) and [Babel](https://github.com/babel/babel)
- 
+
      🔋 Publish transpiled code into NPM
- 
+
      🔋 Run tests
 
      🔋 [ESLint](https://github.com/eslint/eslint) with the [Airbnb style guide](https://github.com/airbnb/javascript)
- 
+
      🔋 Deploy your storybook to GitHub Pages
- 
+
 --
 
 ### Roadmap
@@ -93,7 +104,7 @@ npm i
 npm start
 ```
 
-[<img src="doc/npm-start.png" align="right" class="logo" width="500" title="launching the Storybook"/>](https://raw.githubusercontent.com/sm-react/storybook-boilerplate/master/doc/npm-start.png) 
+[<img src="doc/npm-start.png" align="right" class="logo" width="500" title="launching the Storybook"/>](https://raw.githubusercontent.com/sm-react/storybook-boilerplate/master/doc/npm-start.png)
 
 Open http://localhost:9001/ in your browser.
 
@@ -105,9 +116,9 @@ Two panel will appear. You will see the list of `stories` at the left panel and 
 
 Let's select another theme for this page. Do it via drop-down list at the bottom panel. Out of the box there are three themes: 'Light', 'Dark' and 'Gray'. Check out them.
 
-[<img src="doc/left-pane.png" align="left" width="180" title="Left Storybook panel"/>](https://raw.githubusercontent.com/sm-react/storybook-boilerplate/master/doc/left-pane.png) 
+[<img src="doc/left-pane.png" align="left" width="180" title="Left Storybook panel"/>](https://raw.githubusercontent.com/sm-react/storybook-boilerplate/master/doc/left-pane.png)
 
-Note the text field with the full theme data. You can change any property and instantly see how the result will affect the appearance of the page. But the best way to edit theme is to use `Theme Editor`. 
+Note the text field with the full theme data. You can change any property and instantly see how the result will affect the appearance of the page. But the best way to edit theme is to use `Theme Editor`.
 
 Click to `Show Theme Editor`. It'll open a panel with a list of all theme props at the right. Click to any colored box in this list to open the color picker tool, for example on `textColor`. Now you can move your mouse over the color swatches and see how the color of text is changing.
 
@@ -129,15 +140,15 @@ You can list all scripts by `npm run`
   <summary>
     <b>Linting</b> <br> `npm lint` - lints your code within `src` folder <br> `npm lintfix` - tries to fix linting errors <br>
   </summary>
-  
-  This project uses [ESLint](https://github.com/eslint/eslint) with the [Airbnb style guide](https://github.com/airbnb/javascript). It has some minor overrides as well. I'll [find](https://github.com/sm-react/storybook-boilerplate/blob/master/.eslintrc) all ESLint settings in `.eslintrc` file located in the root of your project. 
-  
+
+  This project uses [ESLint](https://github.com/eslint/eslint) with the [Airbnb style guide](https://github.com/airbnb/javascript). It has some minor overrides as well. I'll [find](https://github.com/sm-react/storybook-boilerplate/blob/master/.eslintrc) all ESLint settings in `.eslintrc` file located in the root of your project.
+
   [<img src="doc/npm-lint.png" align="right" class="logo" width="486" title="linting"/>](https://raw.githubusercontent.com/sm-react/storybook-boilerplate/master/doc/npm-lint.png)
-  
+
   This linting scripts will check your code in `*.js` and `*.jsx` files within the `src` folder.
-    
+
   If your IDE supports the linting settings from `.eslintrc` you'll be able to see same issues bouth from IDE and CLI.
-  
+
   **Note**: Some [files](https://github.com/sm-react/storybook-boilerplate/blob/master/src/Intro.jsx#L1-L2) in `src` use the comments to suppress linting errors. It's up to you to continue using them or remove and change code style appropriately.
 
 </details>
@@ -148,7 +159,7 @@ You can list all scripts by `npm run`
   <summary>
     <b>Publish to NPM</b> <br> `npm publish` - publish your code to NPM<br>
   </summary>
-  
+
 The publish script first transpille your code to ES5 and put it to `dist` folder, which is cleared before each transpillation.
 
 [<img src="doc/npm-publish.png" align="right" class="logo" width="560" title="publish to NPM"/>](https://raw.githubusercontent.com/sm-react/storybook-boilerplate/master/doc/npm-publish.png)
@@ -170,10 +181,10 @@ You'll [find](https://github.com/sm-react/storybook-boilerplate/blob/master/.bab
 In some cases you need only transpille your code, not publish. So use `npm run prepublish` and get you ES5 code in the `dist` folder.
 
 >Transplling your code to ES5 helps to use it in any other projects without warring about babel settings of these projects.
- 
-**Note**: you need to set at least your own [name](https://github.com/sm-react/storybook-boilerplate/blob/master/package.json#L2) and [version](https://github.com/sm-react/storybook-boilerplate/blob/master/package.json#L3) in `package.json` before publishing. You might want to set other [fields](https://docs.npmjs.com/files/package.json) as well. 
-  
-  
+
+**Note**: you need to set at least your own [name](https://github.com/sm-react/storybook-boilerplate/blob/master/package.json#L2) and [version](https://github.com/sm-react/storybook-boilerplate/blob/master/package.json#L3) in `package.json` before publishing. You might want to set other [fields](https://docs.npmjs.com/files/package.json) as well.
+
+
 </details>
 
 --
@@ -186,9 +197,9 @@ In some cases you need only transpille your code, not publish. So use `npm run p
 Now it supports only Github Pages.
 
 [<img src="doc/npm-deploy.png" align="right" class="logo" width="646" title="deploy to Github"/>](https://raw.githubusercontent.com/sm-react/storybook-boilerplate/master/doc/npm-deploy.png)
- 
+
 This script uses your `git` remote `origin` url to get your repo. You can check it out by `git remote get-url origin`.
- 
+
 **Note** if you get this project by `git clone` command, you need to remove current git settings and add your own repo. If you've already created your Github repo you could setup git this way:
 
 ```
@@ -211,7 +222,7 @@ You'll find your repo's adress pressing `Clone or download` button at your githu
 It will find `tests` folder within `src` and run them once.
 
 [<img src="doc/npm-testonly.png" align="right" class="logo" width="613" title="run tests"/>](https://raw.githubusercontent.com/sm-react/storybook-boilerplate/master/doc/npm-testonly.png)
- 
+
 **Note**: we have a `svg` file imported in `<Header />` component. This script is [setted up](.scripts/run_tests/mocha_runner.js) to ignore images with such extensions.
 
 `npm run test-watch` - starts to monitor changes in your `js`, `jsx` and `json` files
